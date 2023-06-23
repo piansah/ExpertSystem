@@ -166,7 +166,7 @@
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/hamster_empat" />
+                    android:src="@drawable/hamster_d" />
                 <!--android:src="@drawable/gambar_empat"-->
 
                 <TextView

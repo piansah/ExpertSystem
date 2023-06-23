@@ -49,7 +49,7 @@ class DiseaseFragment : Fragment() {
                 "Jaga kebersihan kandang hamster, pastikan sirkulasi udara yang baik, dan hindari kontaminasi makanan.",
                 "Pemeriksaan tinja, pemeriksaan kulit atau rambut yang bermasalah, dan tes laboratorium jika diperlukan.",
                 "Pengobatan antijamur yang diresepkan oleh dokter hewan, perbaikan kebersihan kandang, dan pemberian makanan yang sehat.",
-                ""
+                "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/hamster_c.jpg"
             ),
             MyDisease(
                 "Diare (Bakteri)",
@@ -57,7 +57,7 @@ class DiseaseFragment : Fragment() {
                 "Jaga kebersihan kandang hamster, pastikan kebersihan makanan dan air minum, serta hindari kontak dengan hewan yang terinfeksi.",
                 "Pemeriksaan tinja dan pemeriksaan klinis oleh dokter hewan.",
                 "Pengobatan antibiotik yang diresepkan oleh dokter hewan, perbaikan kebersihan kandang, dan pemberian makanan yang bergizi.",
-                ""
+                "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/hamster_d.jpg"
             ),
             MyDisease(
                 "Flu Hamster",
@@ -65,7 +65,7 @@ class DiseaseFragment : Fragment() {
                 "Jaga kebersihan kandang hamster, hindari kontak dengan hamster yang terinfeksi, dan isolasi hamster yang sakit untuk mencegah penyebaran infeksi.",
                 "Pemeriksaan klinis oleh dokter hewan berpengalaman dan tes laboratorium jika diperlukan.",
                 "Perawatan simtomatik, seperti menjaga kebersihan kandang, memberikan makanan yang bergizi, dan pemberian obat-obatan yang diresepkan oleh dokter hewan untuk mengurangi gejala.",
-                ""
+                "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/hamster_e.jpg"
             ),
             MyDisease(
                 "Ekor Basah",
@@ -73,7 +73,7 @@ class DiseaseFragment : Fragment() {
                 "Jaga kebersihan kandang hamster, hindari stres yang berlebihan, dan berikan makanan yang seimbang.",
                 "Pemeriksaan klinis oleh dokter hewan berpengalaman dan tes laboratorium untuk mengidentifikasi bakteri penyebab.",
                 "Pengobatan dengan antibiotik yang diresepkan oleh dokter hewan, perawatan simtomatik untuk mengatasi dehidrasi dan kehilangan nafsu makan, serta menjaga kebersihan kandang dengan lebih intensif.",
-                ""
+                "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/hamster_f.png"
             ),
             MyDisease(
                 "Sembelit",
@@ -81,7 +81,7 @@ class DiseaseFragment : Fragment() {
                 "Pastikan hamster mendapatkan makanan yang mengandung serat yang cukup, berikan akses ke air minum yang bersih dan segar, serta hindari pakan yang terlalu kering.",
                 "Pemeriksaan klinis oleh dokter hewan dan pemeriksaan tinja jika diperlukan.",
                 "Meningkatkan serat dalam makanan hamster, memastikan mereka terhidrasi dengan baik, dan memberikan perawatan simtomatik seperti minyak mineral atau pencahar yang disarankan oleh dokter hewan.",
-                ""
+                "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/hamster_g.jpg"
             ),
             MyDisease(
                 "Batu Ginjal",
