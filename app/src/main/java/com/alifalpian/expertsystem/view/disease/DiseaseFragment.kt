@@ -33,7 +33,7 @@ class DiseaseFragment : Fragment() {
                 "Jaga kebersihan lingkungan kandang hamster, hindari kontak dengan hamster yang terinfeksi, dan vaksinasi yang tepat.",
                 "Pemeriksaan klinis oleh dokter hewan berpengalaman, serta tes laboratorium jika diperlukan.",
                 "Perawatan simtomatik, seperti menjaga kebersihan kandang, memberikan makanan yang bergizi, dan pemberian obat-obatan yang diresepkan oleh dokter hewan.",
-                ""
+                "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/hamster_a.jpg"
             ),
             MyDisease(
                 "Diare",

@@ -64,7 +64,7 @@
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/hamster_b"/>
+                    android:src="@drawable/hamster_dua"/>
                 <!-- android:src="@drawable/gambar_dua"-->
 
                 <TextView
@@ -96,7 +96,7 @@
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/hamster_a"/>
+                    android:src="@drawable/hamster_satu"/>
                 <!--android:src="@drawable/gambar_tiga"-->
 
 
@@ -129,7 +129,7 @@
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/hamster_c" />
+                    android:src="@drawable/hamster_tiga" />
                 <!--android:src="@drawable/gambar_satu"-->
 
                 <TextView
@@ -166,7 +166,7 @@
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/hamster_d" />
+                    android:src="@drawable/hamster_empat" />
                 <!--android:src="@drawable/gambar_empat"-->
 
                 <TextView
