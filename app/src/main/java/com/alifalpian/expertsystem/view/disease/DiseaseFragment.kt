@@ -41,7 +41,7 @@ class DiseaseFragment : Fragment() {
                 "Jaga kebersihan kandang hamster, hindari perubahan makanan yang tiba-tiba, dan pastikan hamster mendapatkan makanan yang seimbang.",
                 "Pemeriksaan tinja dan pemeriksaan klinis oleh dokter hewan.",
                 "Pemberian makanan yang mudah dicerna, cairan elektrolit untuk menghindari dehidrasi, dan pengobatan sesuai dengan penyebab yang mendasari.",
-                ""
+                "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/hamster_b.jpg"
             ),
             MyDisease(
                 " Diare (Jamur)",
