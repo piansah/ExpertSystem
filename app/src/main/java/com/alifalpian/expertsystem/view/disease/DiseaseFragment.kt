@@ -89,7 +89,7 @@ class DiseaseFragment : Fragment() {
                 "penjelasan",
                 "penjelasan",
                 "penjelasan",
-                ""
+                "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/kambing_putih.jpg"
             ),
         )
         setupRecyclerView(listDisease)
