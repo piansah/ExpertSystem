@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.alifalpian.expertsystem.R
 import com.alifalpian.expertsystem.databinding.FragmentProfileBinding
 
+@Suppress("DEPRECATION")
 class ProfileFragment : Fragment() {
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!!

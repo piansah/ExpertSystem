@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.alifalpian.expertsystem.R
 import com.alifalpian.expertsystem.databinding.FragmentAboutBinding
 
+@Suppress("DEPRECATION")
 class AboutFragment : Fragment() {
     private var _binding: FragmentAboutBinding? = null
     private val binding get() = _binding!!
