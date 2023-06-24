@@ -32,7 +32,6 @@ class DetailFragment : Fragment() {
         val penjelasanPencegahan = arguments?.getString("Pencegahan")
         val penjelasanDiagnosis = arguments?.getString("diagnosis")
         val penjelasanPerawatan = arguments?.getString("perawatan")
-        val foto = arguments?.getString("foto")
 
 
         binding.txtPenyakit.text = penyakit
@@ -40,7 +39,6 @@ class DetailFragment : Fragment() {
         binding.txtPenjelasanPencegahan.text = penjelasanPencegahan
         binding.txtPenjelasanDiagnosis.text = penjelasanDiagnosis
         binding.txtPenjelasanPerawatan.text = penjelasanPerawatan
-        Glide.with(requireContext()).load(foto).into(binding.image)
 
         // Menampilkan tombol back
         setHasOptionsMenu(true)

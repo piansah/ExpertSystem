@@ -44,7 +44,7 @@ class DiseaseFragment : Fragment() {
                 "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/hamster_b.jpg"
             ),
             MyDisease(
-                " Diare (Jamur)",
+                "Diare (Jamur)",
                 "Diare yang disebabkan oleh infeksi jamur pada hamster dapat terjadi akibat spesies jamur seperti Candida spp. atau Aspergillus spp. Gejalanya meliputi diare dengan tinja berwarna coklat atau hijau tua, penurunan nafsu makan, kehilangan berat badan, kelemahan, dan perubahan pada kulit atau rambut.",
                 "Jaga kebersihan kandang hamster, pastikan sirkulasi udara yang baik, dan hindari kontaminasi makanan.",
                 "Pemeriksaan tinja, pemeriksaan kulit atau rambut yang bermasalah, dan tes laboratorium jika diperlukan.",
@@ -69,7 +69,7 @@ class DiseaseFragment : Fragment() {
             ),
             MyDisease(
                 "Ekor Basah",
-                " Ekor Basah atau \"Wet Tail\" adalah penyakit serius yang mempengaruhi saluran pencernaan hamster. Penyakit ini umumnya disebabkan oleh infeksi bakteri Lawsonia intracellularis. Gejala yang muncul termasuk diare berair yang parah, tinja berbau busuk, kehilangan nafsu makan, kelelahan, dehidrasi, dan ekor yang tampak basah akibat kelebihan cairan.",
+                "Ekor Basah atau \"Wet Tail\" adalah penyakit serius yang mempengaruhi saluran pencernaan hamster. Penyakit ini umumnya disebabkan oleh infeksi bakteri Lawsonia intracellularis. Gejala yang muncul termasuk diare berair yang parah, tinja berbau busuk, kehilangan nafsu makan, kelelahan, dehidrasi, dan ekor yang tampak basah akibat kelebihan cairan.",
                 "Jaga kebersihan kandang hamster, hindari stres yang berlebihan, dan berikan makanan yang seimbang.",
                 "Pemeriksaan klinis oleh dokter hewan berpengalaman dan tes laboratorium untuk mengidentifikasi bakteri penyebab.",
                 "Pengobatan dengan antibiotik yang diresepkan oleh dokter hewan, perawatan simtomatik untuk mengatasi dehidrasi dan kehilangan nafsu makan, serta menjaga kebersihan kandang dengan lebih intensif.",
@@ -86,9 +86,9 @@ class DiseaseFragment : Fragment() {
             MyDisease(
                 "Batu Ginjal",
                 "Batu ginjal dapat terjadi pada hamster ketika endapan mineral mengkristal dalam saluran kemih dan membentuk batu di dalam ginjal. Hal ini dapat mengganggu fungsi ginjal dan menyebabkan gejala seperti nyeri perut, kelemahan, penurunan nafsu makan, diare, muntah, atau kesulitan buang air kecil. Penyebab pasti pembentukan batu ginjal pada hamster belum sepenuhnya dipahami, namun faktor seperti keturunan, dehidrasi, dan makanan yang tidak seimbang dapat berperan dalam perkembangan kondisi ini.",
-                "penjelasan",
-                "penjelasan",
-                "penjelasan",
+                "Pastikan hamster selalu terhidrasi dengan baik, berikan makanan yang sehat dan seimbang, serta hindari kelebihan mineral dalam pakan.",
+                "Pemeriksaan klinis oleh dokter hewan berpengalaman, pemeriksaan radiologi, dan tes laboratorium jika diperlukan.",
+                "Perawatan tergantung pada ukuran dan lokasi batu ginjal, dapat meliputi pemberian obat untuk menghancurkan batu, pembedahan untuk mengangkat batu yang besar, atau perubahan diet yang disarankan oleh dokter hewan.",
                 "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/kambing_putih.jpg"
             ),
         )

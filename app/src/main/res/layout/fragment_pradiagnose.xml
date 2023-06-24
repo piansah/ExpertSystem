@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background_page"
+    android:background="@drawable/background_page_ii"
     tools:context=".view.diagnose.PradiagnoseFragment">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -34,9 +34,9 @@
         android:id="@+id/pra_diagnose"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:textSize="14sp"
         android:justificationMode="inter_word"
         android:text="@string/pradiagnose_txt" />
@@ -45,8 +45,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:textSize="14sp"
         android:justificationMode="inter_word"
         android:text="@string/mulai_diagnosa" />
