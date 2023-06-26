@@ -23,28 +23,6 @@ class AboutFragment : Fragment() {
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
         val view = binding.root
 
-        binding.bottomNavigation.setOnNavigationItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.nav_home -> {
-                    findNavController().navigate(R.id.action_aboutFragment_to_homeFragment)
-                    true
-                }
-                R.id.nav_account -> {
-                    findNavController().navigate(R.id.action_aboutFragment_to_profileFragment)
-                    true
-                }
-                R.id.nav_about -> {
-                    findNavController().navigate(R.id.action_aboutFragment_self)
-                    true
-                }
-                R.id.nav_logout -> {
-                    // Tindakan yang dilakukan saat item "Logout" dipilih
-                    true
-                }
-                else -> false
-            }
-        }
-
         return view
     }
 

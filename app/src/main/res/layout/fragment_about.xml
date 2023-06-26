@@ -75,24 +75,24 @@
 
     </LinearLayout>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/White"
-        app:itemIconTint="@color/GreenTosca"
-        app:itemIconSize="30dp"
-        app:labelVisibilityMode="unlabeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/nav_bar" />
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottomNavigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="@color/White"-->
+<!--        app:itemIconTint="@color/GreenTosca"-->
+<!--        app:itemIconSize="30dp"-->
+<!--        app:labelVisibilityMode="unlabeled"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:menu="@menu/nav_bar" />-->
 
-    <View
-        android:id="@+id/ViewDivinder"
-        android:layout_width="wrap_content"
-        android:layout_height="1dp"
-        android:background="@color/Divider"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"
-        tools:ignore="MissingConstraints" />
+<!--    <View-->
+<!--        android:id="@+id/ViewDivinder"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/Divider"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

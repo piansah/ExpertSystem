@@ -10,9 +10,6 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_self"
-            app:destination="@id/homeFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_diseaseFragment"
             app:destination="@id/diseaseFragment" />
         <action
@@ -25,14 +22,15 @@
             android:id="@+id/action_homeFragment_to_guideFragment"
             app:destination="@id/guideFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
 
     </fragment>
     <fragment
@@ -100,6 +98,7 @@
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -133,9 +132,6 @@
         <action
             android:id="@+id/action_aboutFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_aboutFragment_self"
-            app:destination="@id/aboutFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -148,8 +144,5 @@
         <action
             android:id="@+id/action_profileFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_profileFragment_self"
-            app:destination="@id/profileFragment" />
     </fragment>
 </navigation>
