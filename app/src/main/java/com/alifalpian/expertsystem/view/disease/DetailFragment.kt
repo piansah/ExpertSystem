@@ -9,7 +9,6 @@ import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.alifalpian.expertsystem.databinding.FragmentDetailBinding
-import com.bumptech.glide.Glide
 
 class DetailFragment : Fragment() {
     private var _binding: FragmentDetailBinding? = null
@@ -28,7 +27,7 @@ class DetailFragment : Fragment() {
 
         // Mengambil data dari argumen atau Intent jika digunakan sebagai Fragment dalam Activity
         val penyakit = arguments?.getString("penyakit")
-        val penjelasanPenyakit = arguments?.getString("penyakit")
+        val penjelasanPenyakit = arguments?.getString("penjelasanpenyakit")
         val penjelasanPencegahan = arguments?.getString("Pencegahan")
         val penjelasanDiagnosis = arguments?.getString("diagnosis")
         val penjelasanPerawatan = arguments?.getString("perawatan")

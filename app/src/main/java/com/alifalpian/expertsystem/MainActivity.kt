@@ -3,6 +3,7 @@ package com.alifalpian.expertsystem
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.alifalpian.expertsystem.databinding.ActivityMainBinding
@@ -37,4 +38,18 @@ class MainActivity : AppCompatActivity() {
     private fun hideBottomNav() {
         binding.bottomNavigation.visibility = View.GONE
     }
+
+    override fun onBackPressed() {
+        val navController = findNavController(R.id.fragmentContainerView)
+        val currentFragment = navController.currentDestination?.id
+
+        if (currentFragment == R.id.homeFragment ||
+            currentFragment == R.id.profileFragment ||
+            currentFragment == R.id.aboutFragment) {
+            // Do nothing
+        } else {
+            super.onBackPressed()
+        }
+    }
 }
+

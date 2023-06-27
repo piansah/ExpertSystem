@@ -8,9 +8,9 @@ import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.alifalpian.expertsystem.adapter.DiseaseViewAdapter
 import com.alifalpian.expertsystem.databinding.FragmentDiseaseBinding
 import com.alifalpian.expertsystem.model.MyDisease
-import com.alifalpian.expertsystem.view.adapter.DiseaseViewAdapter
 
 class DiseaseFragment : Fragment() {
     private var _binding: FragmentDiseaseBinding? = null

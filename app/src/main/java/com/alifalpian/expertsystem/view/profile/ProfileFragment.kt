@@ -30,9 +30,9 @@ class ProfileFragment : Fragment() {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this) {
             findNavController().navigateUp()
-
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
