@@ -76,6 +76,4 @@ class MainActivity : AppCompatActivity() {
         googleSignInClient.signOut().addOnCompleteListener(this) {
         }
     }
-
-
 }

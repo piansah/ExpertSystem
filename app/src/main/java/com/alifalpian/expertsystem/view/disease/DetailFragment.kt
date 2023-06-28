@@ -25,12 +25,13 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Mengambil data dari argumen atau Intent jika digunakan sebagai Fragment dalam Activity
+        // Ambil Data by Bundle
         val penyakit = arguments?.getString("penyakit")
-        val penjelasanPenyakit = arguments?.getString("penjelasanpenyakit")
-        val penjelasanPencegahan = arguments?.getString("Pencegahan")
-        val penjelasanDiagnosis = arguments?.getString("diagnosis")
-        val penjelasanPerawatan = arguments?.getString("perawatan")
+        val penjelasanPenyakit = arguments?.getString("penjelasanPenyakit")
+        val penjelasanPencegahan = arguments?.getString("penjelasanPencegahan")
+        val penjelasanDiagnosis = arguments?.getString("penjelasanDiagnosis")
+        val penjelasanPerawatan = arguments?.getString("penjelasanPerawatan")
+
 
 
         binding.txtPenyakit.text = penyakit

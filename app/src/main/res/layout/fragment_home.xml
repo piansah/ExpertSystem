@@ -16,16 +16,16 @@
         android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/btnLogout"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginEnd="15dp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/baseline_logout_24"
-            app:layout_constraintBottom_toBottomOf="@+id/textAppName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textAppName" />
+<!--        <ImageView-->
+<!--            android:id="@+id/btnLogout"-->
+<!--            android:layout_width="30dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            android:src="@drawable/baseline_logout_24"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/textAppName"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/textAppName" />-->
 
         <TextView
             android:id="@+id/textAppName"

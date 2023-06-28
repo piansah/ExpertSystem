@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.findNavController
+import androidx.navigation.Navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.alifalpian.expertsystem.R
 import com.alifalpian.expertsystem.databinding.DiseaseListBinding
@@ -34,7 +34,7 @@ class DiseaseViewAdapter(private val context: Context, private val listDisease: 
             bundle.putString("penjelasanDiagnosis", listDisease[position].penjelasanDiagnosis)
             bundle.putString("penjelasanPerawatan", listDisease[position].penjelasanPerawatan)
             bundle.putString("foto", listDisease[position].foto)
-            holder.itemView.findNavController().navigate(R.id.action_diseaseFragment_to_detailFragment, bundle)
+            findNavController(it).navigate(R.id.action_diseaseFragment_to_detailFragment, bundle)
         }
     }
 }

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_page_ii"
+    tools:context=".view.guide.GuideFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_background_ii">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Petunjuk Penggunaan"
+                    android:textColor="@color/White"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Petunjuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Langkah-langkah untuk menggunakan aplikasi ini:"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="1. Buka aplikasi Diagnosa Penyakit Haster" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="2. Lihat daftar gejala yang mungkin dialami oleh hamster Anda" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="3. Pilih gejala dengan mencentang kotak di sampingnya." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="4. Tekan tombol 'Cek Diagnosa' setelah memilih gejala." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="5. Lihat kemungkinan penyakit berdasarkan gejala yang dipilih." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="6. Baca deskripsi penyakit untuk pemahaman lebih lanjut." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="7. Pilih penyakit yang cocok dengan gejala yang dialami." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="8. Tekan tombol 'Diagnosis' untuk hasil diagnosa." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="9. Lihat hasil diagnosa berdasarkan gejala yang dipilih." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="10. Baca informasi lebih lanjut tentang penyakit yang terdiagnosis." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="11. Gunakan tombol 'Kembali' untuk ke beranda atau 'Reset' untuk mulai ulang." />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/instruction_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Catatan:"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/instruction_note_content"
+            android:layout_width="match_parent"
+            android:textSize="12sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="8dp"
+            android:justificationMode="inter_word"
+            android:text="Aplikasi ini hanya sebagai panduan awal untuk membantu Anda dalam melakukan diagnosa penyakit pada hamster Anda. Tetapi, hasil yang diberikan tidak dapat menggantikan diagnosa dari seorang dokter hewan yang berkualifikasi. Jika hamster Anda mengalami masalah kesehatan serius atau gejala yang tidak membaik, segera konsultasikan dengan dokter hewan." />
+
+        <TextView
+            android:id="@+id/thank_you_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="16dp"
+            android:justificationMode="inter_word"
+            android:text="Terima kasih telah menggunakan Aplikasi Sistem Pakar Diagnosa Penyakit Hamster. Semoga aplikasi ini dapat memberikan informasi yang berguna untuk merawat hamster Anda dengan lebih baik."
+            android:textStyle="italic" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_page_ii"
+    tools:context=".view.about.AboutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/header_background_ii">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tentang Aplikasi"
+                    android:textColor="@color/White"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Petunjuk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="  Selamat datang di Aplikasi Hamscare Sistem Pakar Diagnosa Hamster! Aplikasi ini dirancang khusus untuk membantu Anda dalam mendiagnosis kesehatan hamster peliharaan Anda dengan cepat dan akurat. Selain itu, aplikasi ini juga menyediakan informasi yang berguna tentang penyakit yang umum terjadi pada hamster, riwayat diagnosa, serta petunjuk pengguna untuk menjaga kesehatan hamster Anda."
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/instruction_note_content"
+                android:layout_width="match_parent"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="  Kami berharap Aplikasi Sistem Pakar Diagnosa Hamster ini dapat menjadi alat yang berguna bagi Anda sebagai pemilik hamster. Namun, perlu diingat bahwa hasil diagnosa dari aplikasi ini tidak menggantikan kunjungan ke dokter hewan yang profesional. Jika Anda memiliki kekhawatiran serius tentang kesehatan hamster Anda, disarankan untuk berkonsultasi dengan dokter hewan yang berpengalaman." />
+
+            <TextView
+                android:id="@+id/thank_you_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="  Terima kasih telah menggunakan Aplikasi Sistem Pakar Diagnosa Hamster. Kami berharap Anda dan hamster Anda tetap sehat dan bahagia!" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottomNavigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:backgroundTint="@color/White"-->
+<!--        app:itemIconTint="@color/GreenTosca"-->
+<!--        app:itemIconSize="30dp"-->
+<!--        app:labelVisibilityMode="unlabeled"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:menu="@menu/nav_bar" />-->
+
+<!--    <View-->
+<!--        android:id="@+id/ViewDivinder"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:background="@color/Divider"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
