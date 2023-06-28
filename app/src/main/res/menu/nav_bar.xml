@@ -18,7 +18,7 @@
         android:title="about" />
 
     <item
-        android:id="@+id/logout"
+        android:id="@+id/signOut"
         android:icon="@drawable/baseline_logout_24"
         android:title="Logout"/>
 </menu>

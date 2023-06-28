@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-class RegisterFragment : Fragment(), View.OnClickListener {
+class RegisterFragment : Fragment() {
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
     private lateinit var auth: FirebaseAuth
@@ -38,51 +38,31 @@ class RegisterFragment : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
 
         auth = Firebase.auth
-        binding.btnRegister.setOnClickListener(this)
-        binding.inputDateOfBirth.setOnClickListener(this)
+        binding.btnRegister.setOnClickListener { createAccount() }
+        binding.inputDateOfBirth.setOnClickListener { showDatePickerDialog() }
     }
 
-    override fun onClick(view: View?) {
-        when (view?.id) {
-            R.id.btnRegister -> createAccount(
-                binding.inputEmail.text.toString(),
-                binding.inputPassword.text.toString()
-            )
-            R.id.inputDateOfBirth -> showDatePickerDialog()
-        }
-    }
+    private fun createAccount() {
+        val email = binding.inputEmail.text.toString()
+        val password = binding.inputPassword.text.toString()
 
-    private fun createAccount(email: String, password: String) {
-        if (!validateForm()) {
+        if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            Toast.makeText(requireContext(), "Email and password are required.", Toast.LENGTH_SHORT).show()
             return
         }
+
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                Toast.makeText(requireContext(), "Create User Success.", Toast.LENGTH_SHORT).show()
-                requireActivity().finish()
+                Toast.makeText(requireContext(), "User created successfully.", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
             } else {
-                Toast.makeText(requireContext(), "Authentication failed.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Failed to create user.", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
-    private fun validateForm(): Boolean {
-        var valid = true
-        val email = binding.inputEmail.text.toString()
-        if (TextUtils.isEmpty(email)) {
-            binding.inputEmail.error = "Required."
-            valid = false
-        } else {
-            binding.inputEmail.error = null
-        }
-        val password = binding.inputPassword.text.toString()
-        if (TextUtils.isEmpty(password)) {
-            binding.inputPassword.error = "Required."
-            valid = false
-        } else {
-            binding.inputPassword.error = null
-        }
-        return valid
+    private fun navigateToLogin() {
+        findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
     }
 
     private fun showDatePickerDialog() {
