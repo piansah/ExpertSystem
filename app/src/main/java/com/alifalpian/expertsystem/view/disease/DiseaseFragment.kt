@@ -24,8 +24,11 @@ class DiseaseFragment : Fragment() {
         return binding.root
     }
 
+    // Function yang dipanggil setelah fragment terbentuk, digunakan untuk menginisialisasi tampilan dan data
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // List penyakit hamster
         val listDisease = arrayListOf(
             MyDisease(
                 "Salesma",
@@ -92,22 +95,28 @@ class DiseaseFragment : Fragment() {
                 "https://raw.githubusercontent.com/piansah/ExpertSystem/master/app/src/main/res/drawable/kambing_putih.jpg"
             ),
         )
-        setupRecyclerView(listDisease)
+        // Memanggil fungsi DiseaseViewAdapter untuk mengatur RecyclerView
+        DiseaseViewAdapter(listDisease)
     }
 
+    // Function yang dipanggil saat fragment dihancurkan, digunakan untuk membersihkan tampilan
     override fun onDestroyView() {
         super.onDestroyView()
+        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 
+    // Function yang dipanggil saat fragment dibuat, digunakan untuk menangani tombol kembali
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Mengatur aksi tombol kembali untuk kembali ke fragment sebelumnya
         requireActivity().onBackPressedDispatcher.addCallback(this) {
             findNavController().navigateUp()
         }
     }
 
-    private fun setupRecyclerView(diseaseList: ArrayList<MyDisease>) {
+    // Fungsi untuk mengatur adapter dan layout manager pada RecyclerView
+    private fun DiseaseViewAdapter(diseaseList: ArrayList<MyDisease>) {
         val adapter = DiseaseViewAdapter(requireContext(), diseaseList)
         binding.rvDisease.layoutManager = LinearLayoutManager(requireContext())
         binding.rvDisease.adapter = adapter

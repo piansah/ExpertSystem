@@ -15,18 +15,24 @@ class DiseaseViewAdapter(private val context: Context, private val listDisease: 
     class ViewHolder(val binding: DiseaseListBinding) : RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        // Inflate layout untuk tampilan item daftar penyakit
         val view = DiseaseListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(view)
     }
 
     override fun getItemCount(): Int {
+        // Mengembalikan jumlah item dalam daftar penyakit
         return listDisease.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        // Mengisi data pada item daftar penyakit
         holder.binding.txtNamaPenyakit.text = listDisease[position].penyakit
         Glide.with(holder.itemView.context).load(listDisease[position].foto).into(holder.binding.images)
+
+        // Menambahkan event klik pada item daftar penyakit
         holder.binding.CardView.setOnClickListener {
+            // Membuat bundle untuk menyimpan data yang akan dikirim ke DetailFragment
             val bundle = Bundle()
             bundle.putString("penyakit", listDisease[position].penyakit)
             bundle.putString("penjelasanPenyakit", listDisease[position].penjelasanPenyakit)

@@ -14,6 +14,8 @@ class DetailFragment : Fragment() {
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
 
+
+    // Function untuk mengatur tampilan fragment saat dibuat
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -33,7 +35,7 @@ class DetailFragment : Fragment() {
         val penjelasanPerawatan = arguments?.getString("penjelasanPerawatan")
 
 
-
+        // Mengisi data ke tampilan
         binding.txtPenyakit.text = penyakit
         binding.txtPenjelasanPenyakit.text = penjelasanPenyakit
         binding.txtPenjelasanPencegahan.text = penjelasanPencegahan
@@ -54,8 +56,10 @@ class DetailFragment : Fragment() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+    // Function yang dipanggil saat fragment dibuat, digunakan untuk menangani tombol kembali
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Mengatur aksi tombol kembali untuk kembali ke fragment sebelumnya
         requireActivity().onBackPressedDispatcher.addCallback(this) {
             findNavController().navigateUp()
         }
@@ -63,6 +67,7 @@ class DetailFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 }

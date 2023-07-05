@@ -23,6 +23,7 @@ class PradiagnoseFragment : Fragment() {
         _binding = FragmentPradiagnoseBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        // Menambahkan listener pada tombol "Mulai Diagnosa"
         binding.btnMulaiDiagnosa.setOnClickListener{
             findNavController().navigate(R.id.action_pradiagnoseFragment_to_diagnoseFragment)
         }
@@ -30,16 +31,18 @@ class PradiagnoseFragment : Fragment() {
         return view
     }
 
+    // Function yang dipanggil saat fragment dibuat, digunakan untuk menangani tombol kembali
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Mengatur aksi tombol kembali untuk kembali ke fragment sebelumnya
         requireActivity().onBackPressedDispatcher.addCallback(this) {
             findNavController().navigateUp()
-
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 }

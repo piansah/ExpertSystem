@@ -28,6 +28,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        // Inflate layout untuk tampilan LoginFragment
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -105,6 +106,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 }

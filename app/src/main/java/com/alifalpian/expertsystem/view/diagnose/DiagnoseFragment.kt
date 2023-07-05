@@ -56,6 +56,7 @@ class DiagnoseFragment : Fragment() {
         _binding = FragmentDiagnoseBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        // Inisialisasi checkbox
         CairanHidung = binding.G1
         Bersin = binding.G2
         Lesu = binding.G3
@@ -78,7 +79,7 @@ class DiagnoseFragment : Fragment() {
 
         btnDiagnosa = binding.btnDiagnosa
 
-
+        // Menambahkan listener pada tombol diagnosa
         btnDiagnosa.setOnClickListener {
             var namaPenyakit = ""
 
@@ -142,14 +143,16 @@ class DiagnoseFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 
+    // Function yang dipanggil saat fragment dibuat, digunakan untuk menangani tombol kembali
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Mengatur aksi tombol kembali untuk kembali ke fragment sebelumnya
         requireActivity().onBackPressedDispatcher.addCallback(this) {
             findNavController().navigateUp()
-
         }
     }
 }
