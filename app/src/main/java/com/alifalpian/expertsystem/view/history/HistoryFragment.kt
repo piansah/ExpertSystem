@@ -4,41 +4,52 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.alifalpian.expertsystem.adapter.DiagnoseAdapter
+import com.alifalpian.expertsystem.adapter.DiseaseAdapter
 import com.alifalpian.expertsystem.databinding.FragmentHistoryBinding
+import com.alifalpian.expertsystem.model.MyDiagnose
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class HistoryFragment : Fragment() {
-    private var _binding: FragmentHistoryBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: FragmentHistoryBinding
+    private lateinit var adapter: DiagnoseAdapter
+    private lateinit var databaseRef: DatabaseReference
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        // Inflate layout untuk tampilan AboutFragment
-        _binding = FragmentHistoryBinding.inflate(inflater, container, false)
-        val view = binding.root
-
-        return view
+    ): View? {
+        binding = FragmentHistoryBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
-    // Function yang dipanggil saat fragment dibuat, digunakan untuk menangani tombol kembali
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        // Mengatur aksi tombol kembali untuk kembali ke fragment sebelumnya
-        requireActivity().onBackPressedDispatcher.addCallback(this) {
-            findNavController().navigateUp()
-        }
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        // Membersihkan binding saat view fragment dihancurkan
-        _binding = null
+        adapter = DiagnoseAdapter(ArrayList())
+        binding.rvResult.adapter = adapter
+        binding.rvResult.layoutManager = LinearLayoutManager(requireContext())
+
+        databaseRef = FirebaseDatabase.getInstance().getReference("diagnose")
+        databaseRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val DiagnoseList = ArrayList<MyDiagnose>()
+                for (snapshot in dataSnapshot.children) {
+                    val disease = snapshot.getValue(MyDiagnose::class.java)
+                    disease?.let { DiagnoseList.add(it) }
+                }
+                adapter.setData(DiagnoseList)
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {
+                // Handle database error
+            }
+        })
     }
 }
-
-

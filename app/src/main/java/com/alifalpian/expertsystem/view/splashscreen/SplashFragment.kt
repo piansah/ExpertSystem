@@ -31,7 +31,6 @@ class SplashFragment : Fragment() {
 
         sharedPrefs = requireContext().getSharedPreferences("DataUser", Context.MODE_PRIVATE)
 
-
         if (sharedPrefs.contains("user_id")) {
             Handler().postDelayed({
                 findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
@@ -40,13 +39,11 @@ class SplashFragment : Fragment() {
             Handler().postDelayed({
                 findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
             }, 1000)
-
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 }

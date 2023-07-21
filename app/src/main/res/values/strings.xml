@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">HamsCare</string>
+    <string name="app_name">EyeCare</string>
     <string name="hello">Hello</string>
     <string name="pian">Pian</string>
     <string name="sign_up">Sign Up</string>
     <string name="sign_in">Sign In</string>
-    <string name="password">Password</string>
+    <string name="password">Password</string>1
     <string name="email">Email</string>
     <string name="login">Login</string>
     <string name="search_elements">Search Elements</string>
@@ -26,7 +26,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="version_1_0">Version 1.0</string>
-    <string name="gejala">Berdasarkan gejala yang dipilih, Hamster Anda mengalami</string>
+    <string name="gejala">Berdasarkan gejala yang dipilih, Anda mengalami</string>
     <string name="check">Cek Ulang Diagnosa</string>
     <string name="menu_utama">Menu Utama</string>
     <string name="diagnosa">Diagnosa</string>
@@ -44,13 +44,24 @@
         <item>Batu Ginjal</item>
     </string-array>
     <string name="action_settings">Settings</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="default_web_client_id">\n</string>
     <string name="open_nav">Open Navigation Drawer</string>
     <string name="close_nav">Close Navigation Drawer</string>
-    <string name="pradiagnose_txt">Sebelum memulai diagnosa, kami ingin memastikan bahwa kesehatan hamster Anda sangat penting bagi kami. Jika hamster Anda menunjukkan gejala yang tidak biasa atau Anda merasa khawatir dengan kondisinya, kami sangat menyarankan Anda untuk segera membawa hamster ke dokter hewan yang berpengalaman dalam merawat hewan pengerat. Dokter hewan akan dapat memberikan diagnosis yang akurat dan perawatan yang tepat sesuai kebutuhan hamster Anda.</string>
+    <string name="pradiagnose_txt">Sebelum memulai diagnosa, kami ingin menekankan bahwa kesehatan mata Anda sangat penting bagi kami. Jika Anda mengalami gejala yang tidak biasa atau merasa khawatir dengan kondisi mata Anda, sangat kami sarankan untuk segera berkonsultasi dengan dokter spesialis mata yang berpengalaman. Dokter mata akan dapat memberikan diagnosis yang akurat dan perawatan yang sesuai dengan kebutuhan mata Anda.</string>
     <string name="mulai_diagnosa">Apakah Anda ingin memulai diagnosa sekarang?</string>
     <string name="title_diagnosa">Diagnosa</string>
     <string name="text_btn_diagnosa">Mulai Diagnosa</string>
+    <string name="petunjuk_penggunaan">Petunjuk Penggunaan</string>
+    <string name="langkah_langkah_untuk_menggunakan_aplikasi_ini">Langkah-langkah untuk menggunakan aplikasi ini:</string>
+    <string name="point_petunjuk_1">1. Diagnosa Penyakit Mata: Klik tombol ini untuk memulai proses diagnosa penyakit mata berdasarkan gejala yang Anda alami.</string>
+    <string name="point_petunjuk_2">2. Informasi Penyakit Mata: Klik tombol ini untuk mengetahui informasi lebih lanjut tentang berbagai jenis penyakit mata yang umum terjadi.</string>
+    <string name="point_petunjuk_3">3. Riwayat Diagnosa: Klik tombol ini untuk melihat riwayat diagnosa penyakit mata sebelumnya yang telah Anda lakukan.</string>
+    <string name="point_petunjuk_4">4. Petunjuk Penggunaan: Klik tombol ini untuk membaca petunjuk penggunaan aplikasi secara lengkap.</string>
+    <string name="point_petunjuk_5">5. Informasi Aplikasi: Klik tombol \'Informasi Aplikasi\' pada bottom navigation untuk membaca informasi mengenai aplikasi ini, termasuk tujuan, pengembang, dan versi aplikasi.</string>
+    <string name="point_petunjuk_6">6. Logout: Klik tombol ini untuk keluar dari akun Anda dan kembali ke halaman login.</string>
+    <string name="catatan">Catatan:</string>
+    <string name="isi_catatan_1">Aplikasi ini hanya sebagai panduan awal untuk membantu Anda dalam melakukan diagnosa penyakit mata. Namun, hasil yang diberikan tidak dapat menggantikan diagnosa dari seorang dokter mata yang berkualifikasi. Jika Anda mengalami masalah kesehatan mata yang serius atau gejala yang tidak membaik, segera konsultasikan dengan dokter mata.</string>
+    <string name="isi_catatan_2">Terima kasih telah menggunakan Aplikasi Sistem Pakar Diagnosa Penyakit Mata. Semoga aplikasi ini dapat memberikan informasi yang berguna untuk merawat kesehatan mata Anda dengan lebih baik.</string>
+    <string name="welcome_pradiagnose">Selamat datang di Aplikasi Sistem Pakar untuk Diagnosa Penyakit Mata!</string>
 </resources>

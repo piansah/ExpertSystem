@@ -28,18 +28,17 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // Ambil Data by Bundle
-        val penyakit = arguments?.getString("penyakit")
+        val penyakit = arguments?.getString("namaPenyakit")
         val penjelasanPenyakit = arguments?.getString("penjelasanPenyakit")
         val penjelasanPencegahan = arguments?.getString("penjelasanPencegahan")
-        val penjelasanDiagnosis = arguments?.getString("penjelasanDiagnosis")
+        val penjelasanDiagnosa = arguments?.getString("penjelasanDiagnosa")
         val penjelasanPerawatan = arguments?.getString("penjelasanPerawatan")
-
 
         // Mengisi data ke tampilan
         binding.txtPenyakit.text = penyakit
         binding.txtPenjelasanPenyakit.text = penjelasanPenyakit
         binding.txtPenjelasanPencegahan.text = penjelasanPencegahan
-        binding.txtPenjelasanDiagnosis.text = penjelasanDiagnosis
+        binding.txtPenjelasanDiagnosa.text = penjelasanDiagnosa
         binding.txtPenjelasanPerawatan.text = penjelasanPerawatan
 
         // Menampilkan tombol back

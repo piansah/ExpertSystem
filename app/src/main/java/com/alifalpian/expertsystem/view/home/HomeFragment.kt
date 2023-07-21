@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.alifalpian.expertsystem.R
 import com.alifalpian.expertsystem.databinding.FragmentHomeBinding
+import com.alifalpian.expertsystem.view.authentication.LoginFragment
 import com.google.firebase.auth.FirebaseAuth
 
 class HomeFragment : Fragment() {
@@ -32,7 +33,6 @@ class HomeFragment : Fragment() {
         if (currentUser == null) {
             findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
         }
-
         binding.LayoutDiagnosa.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_pradiagnoseFragment)
         }

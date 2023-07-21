@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        >
+        tools:layout_editor_absoluteX="34dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/toolBar"
@@ -35,64 +36,107 @@
             </androidx.appcompat.widget.Toolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
             android:layout_marginTop="40dp"
+            android:layout_marginEnd="30dp"
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/Petunjuk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:justificationMode="inter_word"
-                android:text="  Selamat datang di Aplikasi Hamscare Sistem Pakar Diagnosa Hamster! Aplikasi ini dirancang khusus untuk membantu Anda dalam mendiagnosis kesehatan hamster peliharaan Anda dengan cepat dan akurat. Selain itu, aplikasi ini juga menyediakan informasi yang berguna tentang penyakit yang umum terjadi pada hamster, riwayat diagnosa, serta petunjuk pengguna untuk menjaga kesehatan hamster Anda."
+                android:gravity="center_horizontal"
+                android:text="Eye Care - Aplikasi Sistem Pakar untuk Diagnosa Penyakit Mata"
                 android:textSize="14sp"
-                android:textStyle="normal" />
+                android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/instruction_note_content"
                 android:layout_width="match_parent"
-                android:textSize="12sp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:justificationMode="inter_word"
-                android:text="  Kami berharap Aplikasi Sistem Pakar Diagnosa Hamster ini dapat menjadi alat yang berguna bagi Anda sebagai pemilik hamster. Namun, perlu diingat bahwa hasil diagnosa dari aplikasi ini tidak menggantikan kunjungan ke dokter hewan yang profesional. Jika Anda memiliki kekhawatiran serius tentang kesehatan hamster Anda, disarankan untuk berkonsultasi dengan dokter hewan yang berpengalaman." />
+                android:text="Selamat datang di Eye Care, Aplikasi Sistem Pakar yang dirancang khusus untuk membantu Anda dalam mendiagnosis penyakit mata dengan akurat dan memberikan informasi yang berguna mengenai kesehatan mata. Aplikasi ini ditujukan untuk memberikan panduan awal bagi pengguna dalam mengidentifikasi gejala dan kemungkinan penyakit mata yang mungkin dialami."
+                android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/thank_you_message"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="12sp"
                 android:layout_marginTop="10dp"
                 android:justificationMode="inter_word"
-                android:text="  Terima kasih telah menggunakan Aplikasi Sistem Pakar Diagnosa Hamster. Kami berharap Anda dan hamster Anda tetap sehat dan bahagia!" />
+                android:text="Fitur Utama Aplikasi:"
+                android:textSize="12sp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:justificationMode="inter_word"
+                android:text="1. Diagnosa Penyakit Mata: Aplikasi Eye Care memiliki kemampuan untuk menganalisis gejala yang Anda alami pada mata dan memberikan diagnosa awal tentang penyakit mata yang mungkin terkait."
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="2. Informasi Penyakit Mata: Aplikasi ini menyediakan informasi yang lengkap mengenai berbagai jenis penyakit mata yang umum terjadi. Anda dapat mempelajari penyebab, gejala, diagnosa, dan perawatan yang diperlukan untuk setiap penyakit mata yang terdaftar."
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="3. Riwayat Diagnosa: Eye Care mencatat riwayat diagnosa yang telah Anda lakukan sebelumnya. Anda dapat melihat kembali hasil diagnosa sebelumnya serta gejala yang Anda pilih pada saat itu."
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="4. Petunjuk Penggunaan: Petunjuk penggunaan yang lengkap disediakan dalam aplikasi ini untuk membantu Anda memahami cara menggunakan fitur-fitur yang tersedia dengan benar. Petunjuk ini akan memandu Anda melalui proses diagnosa, membaca informasi penyakit mata, serta mengakses riwayat diagnosa."
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="Perhatian:"
+                android:textStyle="bold"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:justificationMode="inter_word"
+                android:text="Aplikasi Eye Care ini dirancang sebagai panduan awal dan tidak dapat menggantikan kunjungan ke dokter mata yang berkualifikasi. Jika Anda mengalami masalah kesehatan mata yang serius atau gejala yang tidak membaik, disarankan untuk segera berkonsultasi dengan dokter mata yang kompeten."
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:text="Informasi yang diberikan oleh aplikasi ini hanya bersifat edukatif dan bukan pengganti nasihat medis profesional. Selalu konsultasikan kondisi mata Anda dengan dokter mata sebelum mengambil keputusan tentang perawatan atau pengobatan."
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:text="Terima kasih telah menggunakan Eye Care, Aplikasi Sistem Pakar untuk Diagnosa Penyakit Mata. Semoga aplikasi ini dapat memberikan informasi yang berguna dalam menjaga kesehatan mata Anda. Tetaplah peduli terhadap kesehatan mata Anda dan jangan ragu untuk berkonsultasi dengan dokter mata jika diperlukan."
+                android:textSize="12sp" />
 
         </LinearLayout>
+    </ScrollView>
 
     </LinearLayout>
-
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNavigation"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="@color/White"-->
-<!--        app:itemIconTint="@color/GreenTosca"-->
-<!--        app:itemIconSize="30dp"-->
-<!--        app:labelVisibilityMode="unlabeled"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:menu="@menu/nav_bar" />-->
-
-<!--    <View-->
-<!--        android:id="@+id/ViewDivinder"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="1dp"-->
-<!--        android:background="@color/Divider"-->
-<!--        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"-->
-<!--        tools:ignore="MissingConstraints" />-->
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

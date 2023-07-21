@@ -53,7 +53,7 @@
                         android:id="@+id/G1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/keluar_cairan_dari_hidung" />
+                        android:text="Penglihatan Terasa Kabur" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                         android:layout_below="@id/G1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Bersin"/>
+                        android:text="Mata Berair"/>
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                         android:layout_below="@id/G2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Lesu" />
+                        android:text="Mata Bengkak" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -86,7 +86,7 @@
                         android:layout_below="@id/G3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Kotoran Berwarna Hijau" />
+                        android:text="Mata Terasa Perih" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
                         android:layout_below="@id/G4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Kotoran Encer" />
+                        android:text="Mata Terasa Ada Yang Mengganjal" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
                         android:layout_below="@id/G5"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Sulit Bernafas" />
+                        android:text="Penglihatan Silau" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -119,7 +119,7 @@
                         android:layout_below="@id/G6"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Gatal Pada Kulit" />
+                        android:text="Terlihat Lingkaran Cahaya" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                         android:layout_below="@+id/G7"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Jumlah Kotoran Banyak" />
+                        android:text="Penglihatan Objek Ganda" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -141,7 +141,7 @@
                         android:layout_below="@id/G8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Bagian Ekor Terlihat Selalu Basah" />
+                        android:text="Mata Berwarna Merah" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -152,7 +152,7 @@
                         android:layout_below="@id/G9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Penyumbatan Usus" />
+                        android:text="Mata Terasa Gatal" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -163,7 +163,7 @@
                         android:layout_below="@id/G10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Duduk Selalu Membungkuk" />
+                        android:text="Mata Terasa Panas" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -174,7 +174,7 @@
                         android:layout_below="@id/G11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Sakit Perut" />
+                        android:text="Sakit Kepala" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -185,7 +185,7 @@
                         android:layout_below="@id/G12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tubuh Hamster Terasa Dingin" />
+                        android:text="Mata Terasa Sakit" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -196,7 +196,7 @@
                         android:layout_below="@id/G13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Selalu Tidur Disudut Kandang" />
+                        android:text="Mata Meradang" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
                         android:layout_below="@id/G14"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Bau Sangat Menyengat" />
+                        android:text="Mata Nyeri Hebat" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -218,7 +218,7 @@
                         android:layout_below="@id/G15"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Nafas Terengah-Engah" />
+                        android:text="Mata Terasa Nyeri" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -229,7 +229,7 @@
                         android:layout_below="@id/G16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Tidak Nafsu Makan" />
+                        android:text="Kelainan Pada Pupil Mata" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -240,7 +240,7 @@
                         android:layout_below="@id/G17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Pada Saat Buang Air Kecil Berdarah" />
+                        android:text="Mata Lelah" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -251,15 +251,114 @@
                         android:layout_below="@id/G18"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Bergerak Sangat Lamban" />
+                        android:text="Sering Mengedipkan Mata" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/G19"/>
 
+                    <CheckBox
+                        android:id="@+id/G20"
+                        android:layout_below="@id/G19"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Peka Terhadap Cahaya" />
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/G20"/>
+
+                    <CheckBox
+                        android:id="@+id/G21"
+                        android:layout_below="@id/G20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Penglihatan Dekat TerasaKabur" />
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/G21"/>
+
+                    <CheckBox
+                        android:id="@+id/G22"
+                        android:layout_below="@id/G21"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tekanan Bola Mata Meningkat" />
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/G22"/>
+
+                    <CheckBox
+                        android:id="@+id/G23"
+                        android:layout_below="@id/G22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Penglihatan Objek Jauh Kurang Terlihat Jelas" />
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/G23"/>
+
+                    <CheckBox
+                        android:id="@+id/G24"
+                        android:layout_below="@id/G23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Lemak Menutupi Kornea" />
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/G24"/>
+
+                    <CheckBox
+                        android:id="@+id/G25"
+                        android:layout_below="@id/G24"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Menyipitkan Mata Untuk Melihat Benda Yang Dekat" />
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/G25"/>
+
+                    <CheckBox
+                        android:id="@+id/G26"
+                        android:layout_below="@id/G25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sumber Cahaya Akan Berwarna Pelangi Jika Melihat Cahaya Yang Terang" />
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/G26"/>
+
+                    <CheckBox
+                        android:id="@+id/G27"
+                        android:layout_below="@id/G26"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mata Tegang" />
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/G27"/>
+
+                    <CheckBox
+                        android:id="@+id/G28"
+                        android:layout_below="@id/G27"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Terlihat Bayangan Garis Hitam" />
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/G28"/>
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnDiagnosa"
-                        android:layout_below="@id/G19"
+                        android:layout_below="@id/G28"
                         android:text="Cek Diagnosa"
                         android:layout_width="250dp"
                         android:layout_height="50dp"

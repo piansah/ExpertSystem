@@ -71,11 +71,11 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="125dp"
+                    android:layout_width="170dp"
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/hamster_dua" />
+                    android:src="@drawable/fungsi_satu" />
                 <!-- android:src="@drawable/gambar_dua"-->
 
                 <TextView
@@ -103,11 +103,11 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:layout_width="125dp"
+                    android:layout_width="170dp"
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/hamster_satu" />
+                    android:src="@drawable/fungsi_tiga" />
                 <!--android:src="@drawable/gambar_tiga"-->
 
 
@@ -140,7 +140,7 @@
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/hamster_tiga" />
+                    android:src="@drawable/fungsi_dua" />
                 <!--android:src="@drawable/gambar_satu"-->
 
                 <TextView
@@ -177,7 +177,7 @@
                     android:layout_height="125dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/hamster_empat" />
+                    android:src="@drawable/fungsi_empat" />
                 <!--android:src="@drawable/gambar_empat"-->
 
                 <TextView
@@ -194,7 +194,7 @@
                 android:layout_width="360dp"
                 android:layout_height="172dp"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/konten_a"
+                android:background="@drawable/banner_satu"
                 android:padding="25dp"
                 app:layout_constraintEnd_toEndOf="@id/LayoutRiwayat"
                 app:layout_constraintStart_toStartOf="@id/LayoutDiagnosa"
@@ -205,20 +205,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
-
-
-
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNavigation"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:backgroundTint="@color/White"-->
-<!--        app:itemIconTint="@color/GreenTosca"-->
-<!--        app:itemIconSize="30dp"-->
-<!--        app:labelVisibilityMode="unlabeled"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:menu="@menu/nav_bar" />-->
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

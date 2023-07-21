@@ -27,7 +27,7 @@ class ResultsFragment : Fragment() {
 
         // Menampilkan data diagnosa di TextView
         val hasilDiagnosa =
-            "Berdasarkan gejala yang dipilih, Hamster Anda mengalami <b>$diagnosa</b>"
+            "Berdasarkan gejala yang dipilih, mata anda mengalami <b>$diagnosa</b>"
         binding.HasilDiagnosa.text =
             HtmlCompat.fromHtml(hasilDiagnosa, HtmlCompat.FROM_HTML_MODE_LEGACY)
 

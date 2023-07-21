@@ -9,9 +9,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.alifalpian.expertsystem.databinding.ActivityMainBinding
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
-import android.content.Intent
 import android.util.Log
-import com.alifalpian.expertsystem.view.authentication.LoginFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

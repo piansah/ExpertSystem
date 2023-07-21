@@ -95,7 +95,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/txtPenjelasanDiagnosis"
+                android:id="@+id/txtPenjelasanDiagnosa"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:justificationMode="inter_word"
