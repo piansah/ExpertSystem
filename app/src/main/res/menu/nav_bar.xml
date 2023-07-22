@@ -7,10 +7,10 @@
         android:icon="@drawable/ic_home"
         android:title="home" />
 
-<!--    <item-->
-<!--        android:id="@+id/profileFragment"-->
-<!--        android:icon="@drawable/ic_account"-->
-<!--        android:title="@string/profile" />-->
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_account"
+        android:title="@string/profile" />
 
     <item
         android:id="@+id/aboutFragment"
