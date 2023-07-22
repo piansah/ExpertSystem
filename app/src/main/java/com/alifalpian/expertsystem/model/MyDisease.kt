@@ -6,5 +6,6 @@ data class MyDisease(
     val penjelasanPencegahan : String =" ",
     val penjelasanDiagnosa : String =" ",
     val penjelasanPerawatan : String =" ",
+    val foto : String =" "
     )
 

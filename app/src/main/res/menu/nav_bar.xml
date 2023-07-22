@@ -8,12 +8,17 @@
         android:title="home" />
 
     <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_account"
+        android:title="@string/profile" />
+
+    <item
         android:id="@+id/aboutFragment"
         android:icon="@drawable/baseline_info_24"
         android:title="about" />
 
     <item
-        android:id="@+id/signOut"
+        android:id="@+id/loginFragment"
         android:icon="@drawable/baseline_logout_24"
         android:title="Logout"/>
 </menu>

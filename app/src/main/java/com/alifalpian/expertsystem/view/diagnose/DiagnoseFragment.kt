@@ -52,14 +52,14 @@ class DiagnoseFragment : Fragment() {
     private lateinit var btnDiagnosa : Button
 
     //daftar penyakit
-    val P1 = "Katarak"
-    val P2 = "DryEye(MataKering)"
-    val P3 = "Glaukoma"
-    val P4 = "Keratitis"
-    val P5 = "Myopia"
-    val P6 = "Pterygium"
-    val P7 = "Hypermetropi"
-    val P8 = "Astigmatisma"
+    private val P1 = "Katarak"
+    private val P2 = "DryEye (MataKering)"
+    private val P3 = "Glaukoma"
+    private val P4 = "Keratitis"
+    private val P5 = "Myopia"
+    private val P6 = "Pterygium"
+    private val P7 = "Hypermetropi"
+    private val P8 = "Astigmatisma"
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -111,41 +111,46 @@ class DiagnoseFragment : Fragment() {
 
             // Memeriksa status checkbox dan menggabungkan nama penyakit yang sesuai dengan rule
             if (penglihatanTerasaKabur.isChecked && penglihatanObjekGanda.isChecked && mataTerasaNyeri.isChecked && terlihatBayanganGarisHitam.isChecked) {
-                namaPenyakit += P1+ ", "
+                namaPenyakit += "$P1, "
                 Log.d("Check", namaPenyakit)
             }
             if (mataTerasaAdaYangMengganjal.isChecked && pekaTerhadapCahaya.isChecked) {
-                namaPenyakit += P2+ ", "
+                namaPenyakit += "$P2, "
                 Log.d("Check", namaPenyakit)
 
             }
-            if (mataTerasaSakit.isChecked && kelainanPadaPupilMata.isChecked && tekananBolaMataMeningkat.isChecked && sumberCahayaAkanBerwarnaPelangiJikaMelihatCahayaYangTerang.isChecked) {
-                namaPenyakit += P3+ ", "
+            if (mataTerasaSakit.isChecked && kelainanPadaPupilMata.isChecked
+                && tekananBolaMataMeningkat.isChecked && sumberCahayaAkanBerwarnaPelangiJikaMelihatCahayaYangTerang.isChecked) {
+                namaPenyakit += "$P3, "
                 Log.d("Check", namaPenyakit)
 
             }
-            if (mataBerair.isChecked && mataBengkak.isChecked && mataTerasaGatal.isChecked && mataTerasaPanas.isChecked && mataTerasaNyeri.isChecked) {
-                namaPenyakit += P4+ ", "
+            if (mataBerair.isChecked && mataBengkak.isChecked && mataTerasaGatal.isChecked
+                && mataTerasaPanas.isChecked && mataTerasaNyeri.isChecked) {
+                namaPenyakit += "$P4, "
                 Log.d("Check", namaPenyakit)
 
             }
-            if (sakitKepala.isChecked && mataLelah.isChecked && seringMengedipkanMata.isChecked && penglihatanObjekJauhKurangTerlihatJelas.isChecked) {
-                namaPenyakit += P5+ ", "
+            if (sakitKepala.isChecked && mataLelah.isChecked && seringMengedipkanMata.isChecked
+                && penglihatanObjekJauhKurangTerlihatJelas.isChecked) {
+                namaPenyakit += "$P5, "
                 Log.d("Check", namaPenyakit)
 
             }
             if (mataBerair.isChecked && mataBerwarnaMerah.isChecked && lemakMenutupiKornea.isChecked) {
-                namaPenyakit += P6+ ", "
+                namaPenyakit += "$P6, "
                 Log.d("Check", namaPenyakit)
 
             }
-            if (sakitKepala.isChecked && penglihatanDekatTerasaKabur.isChecked && menyipitkanMataUntukMelihatBendaYangDekat.isChecked) {
-                namaPenyakit += P7+ ", "
+            if (sakitKepala.isChecked && penglihatanDekatTerasaKabur.isChecked
+                && menyipitkanMataUntukMelihatBendaYangDekat.isChecked) {
+                namaPenyakit += "$P7, "
                 Log.d("Check", namaPenyakit)
 
             }
             if (mataTegang.isChecked && penglihatanTerasaKabur.isChecked) {
-                namaPenyakit += P8+ ", "
+                namaPenyakit += "$P8, "
+//                namaPenyakit += P8+ ", "
                 Log.d("Check", namaPenyakit)
             }
 

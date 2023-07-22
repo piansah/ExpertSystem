@@ -64,4 +64,5 @@
     <string name="isi_catatan_1">Aplikasi ini hanya sebagai panduan awal untuk membantu Anda dalam melakukan diagnosa penyakit mata. Namun, hasil yang diberikan tidak dapat menggantikan diagnosa dari seorang dokter mata yang berkualifikasi. Jika Anda mengalami masalah kesehatan mata yang serius atau gejala yang tidak membaik, segera konsultasikan dengan dokter mata.</string>
     <string name="isi_catatan_2">Terima kasih telah menggunakan Aplikasi Sistem Pakar Diagnosa Penyakit Mata. Semoga aplikasi ini dapat memberikan informasi yang berguna untuk merawat kesehatan mata Anda dengan lebih baik.</string>
     <string name="welcome_pradiagnose">Selamat datang di Aplikasi Sistem Pakar untuk Diagnosa Penyakit Mata!</string>
+    <string name="nama_penyakit">Nama Penyakit</string>
 </resources>

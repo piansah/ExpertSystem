@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.activity.addCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.alifalpian.expertsystem.R
 import com.alifalpian.expertsystem.databinding.FragmentAboutBinding
 
 class AboutFragment : Fragment() {
@@ -21,9 +20,8 @@ class AboutFragment : Fragment() {
     ): View {
         // Inflate layout untuk tampilan AboutFragment
         _binding = FragmentAboutBinding.inflate(inflater, container, false)
-        val view = binding.root
 
-        return view
+        return binding.root
     }
 
     // Function yang dipanggil saat fragment dibuat, digunakan untuk menangani tombol kembali

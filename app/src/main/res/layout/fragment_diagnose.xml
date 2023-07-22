@@ -273,7 +273,7 @@
                         android:layout_below="@id/G20"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Penglihatan Dekat TerasaKabur" />
+                        android:text="Penglihatan Dekat Terasa Kabur" />
                     <com.google.android.material.divider.MaterialDivider
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

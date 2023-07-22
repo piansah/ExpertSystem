@@ -1,20 +1,15 @@
 package com.alifalpian.expertsystem
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.alifalpian.expertsystem.databinding.ActivityMainBinding
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.firebase.auth.FirebaseAuth
-import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var auth: FirebaseAuth
-    private lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,34 +21,31 @@ class MainActivity : AppCompatActivity() {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.homeFragment, R.id.profileFragment, R.id.aboutFragment -> {
+                R.id.homeFragment, R.id.profileFragment ,R.id.aboutFragment -> {
                     showBottomNav()
                 }
-//                R.id.signOut -> {
-//                    signOut()
-//                    true
-//                }
 
-                else -> hideBottomNav()
-            }
-        }
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when(it.itemId){
-                R.id.loginFragment ->{
-                    SignOut()
-                    Log.d("MainActivity", "Logout")
-                    true
-
-                }
-                else ->{
-                    Log.d("MainActivity", "Else")
-                    false
-
+                else -> {
+                    hideBottomNav()
                 }
             }
         }
 
         binding.bottomNavigation.setupWithNavController(navController)
+
+        binding.bottomNavigation.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.homeFragment, R.id.profileFragment,R.id.aboutFragment -> {
+                    findNavController(R.id.fragmentContainerView).navigate(item.itemId)
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.loginFragment -> {
+                    signOut()
+                    return@setOnNavigationItemSelectedListener true
+                }
+                else -> return@setOnNavigationItemSelectedListener false
+            }
+        }
     }
 
     private fun showBottomNav() {
@@ -62,6 +54,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun hideBottomNav() {
         binding.bottomNavigation.visibility = View.GONE
+    }
+
+    private fun signOut() {
+        val sharedPrefs = getSharedPreferences("DataUser", MODE_PRIVATE)
+        val editor = sharedPrefs.edit()
+        editor.clear()
+        editor.apply()
+        findNavController(R.id.fragmentContainerView).navigate(R.id.loginFragment)
     }
 
     override fun onBackPressed() {
@@ -77,23 +77,4 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
-
-    private fun SignOut(){
-        val sharedPrefs = getSharedPreferences("DataUser", MODE_PRIVATE)
-        val editor = sharedPrefs.edit()
-        editor.clear()
-        editor.apply()
-        findNavController(R.id.fragmentContainerView).navigate(R.id.loginFragment)
-    }
-
-//    private fun signOut() {
-//        auth.signOut()
-//        val currentUser = auth.currentUser
-//        if (currentUser == null) {
-//            startActivity(Intent(this, LoginFragment::class.java))
-//            finish()
-//        }
-//        googleSignInClient.signOut().addOnCompleteListener(this) {
-//        }
-//    }
 }
