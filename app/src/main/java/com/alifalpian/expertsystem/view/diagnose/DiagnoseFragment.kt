@@ -69,11 +69,9 @@ class DiagnoseFragment : Fragment() {
         _binding = FragmentDiagnoseBinding.inflate(inflater, container, false)
         val view = binding.root
 
-//        setup database
         val database = FirebaseDatabase.getInstance()
         val diagnosaRef = database.reference.child("diagnose")
 
-        // Inisialisasi checkbox
         penglihatanTerasaKabur = binding.G1
         mataBerair = binding.G2
         mataBengkak = binding.G3
@@ -105,11 +103,9 @@ class DiagnoseFragment : Fragment() {
 
         btnDiagnosa = binding.btnDiagnosa
 
-        // Menambahkan listener pada tombol diagnosa
         btnDiagnosa.setOnClickListener {
             var namaPenyakit = ""
 
-            // Memeriksa status checkbox dan menggabungkan nama penyakit yang sesuai dengan rule
             if (penglihatanTerasaKabur.isChecked && penglihatanObjekGanda.isChecked && mataTerasaNyeri.isChecked && terlihatBayanganGarisHitam.isChecked) {
                 namaPenyakit += "$P1, "
                 Log.d("Check", namaPenyakit)
@@ -150,7 +146,6 @@ class DiagnoseFragment : Fragment() {
             }
             if (mataTegang.isChecked && penglihatanTerasaKabur.isChecked) {
                 namaPenyakit += "$P8, "
-//                namaPenyakit += P8+ ", "
                 Log.d("Check", namaPenyakit)
             }
 
@@ -165,19 +160,15 @@ class DiagnoseFragment : Fragment() {
             findNavController().navigate(R.id.action_diagnoseFragment_to_resultFragment,bundle)
 
             val dateTime = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())
-            // objek untuk save ke Firebase Realtime Database
             val diagnosaData = HashMap<String, Any>()
             diagnosaData["result"] = namaPenyakit
             diagnosaData["datetime"] = dateTime
 
-            // Simpan data ke Firebase Realtime Database
             diagnosaRef.push().setValue(diagnosaData)
                 .addOnSuccessListener {
-                    // Penyimpanan berhasil
                     Toast.makeText(requireContext(), "Diagnosa berhasil disimpan", Toast.LENGTH_SHORT).show()
                 }
                 .addOnFailureListener {
-                    // Penyimpanan gagal
                     Toast.makeText(requireContext(), "Gagal menyimpan diagnosa", Toast.LENGTH_SHORT).show()
                 }
         }
@@ -186,14 +177,11 @@ class DiagnoseFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 
-    // Function yang dipanggil saat fragment dibuat, digunakan untuk menangani tombol kembali
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Mengatur aksi tombol kembali untuk kembali ke fragment sebelumnya
         requireActivity().onBackPressedDispatcher.addCallback(this) {
             findNavController().navigateUp()
         }

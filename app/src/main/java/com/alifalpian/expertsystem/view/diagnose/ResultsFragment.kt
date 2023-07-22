@@ -25,19 +25,16 @@ class ResultsFragment : Fragment() {
 
         val diagnosa = arguments?.getString("diagnosa")
 
-        // Menampilkan data diagnosa di TextView
         val hasilDiagnosa =
             "Berdasarkan gejala yang dipilih, mata anda mengalami <b>$diagnosa</b>"
         binding.HasilDiagnosa.text =
             HtmlCompat.fromHtml(hasilDiagnosa, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
-        // Konfigurasi kembali ke diagnosa
 
         binding.btnKembaliDiagnosa.setOnClickListener{
             findNavController().navigate(R.id.action_resultFragment_to_diagnoseFragment)
         }
 
-        // Konfigurasi kembali ke home
 
         binding.btnMenuUtama.setOnClickListener{
             findNavController().navigate(R.id.action_resultFragment_to_homeFragment)
@@ -48,14 +45,11 @@ class ResultsFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 
-    // Function yang dipanggil saat fragment dibuat, digunakan untuk menangani tombol kembali
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Mengatur aksi tombol kembali untuk kembali ke fragment sebelumnya
         requireActivity().onBackPressedDispatcher.addCallback(this) {
             findNavController().navigateUp()
         }

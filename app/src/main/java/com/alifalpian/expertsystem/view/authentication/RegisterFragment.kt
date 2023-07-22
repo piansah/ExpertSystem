@@ -42,7 +42,6 @@ class RegisterFragment : Fragment() {
         binding.inputDateOfBirth.setOnClickListener { showDatePickerDialog() }
     }
 
-    // Fungsi untuk membuat akun pengguna baru
     private fun createAccount() {
         val email = binding.inputEmail.text.toString()
         val password = binding.inputPassword.text.toString()
@@ -62,12 +61,10 @@ class RegisterFragment : Fragment() {
         }
     }
 
-    // Fungsi untuk navigasi ke halaman login
     private fun navigateToLogin() {
         findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
     }
 
-    // Fungsi untuk menampilkan dialog pemilih tanggal
     private fun showDatePickerDialog() {
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH)
@@ -85,7 +82,6 @@ class RegisterFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Mengatur aksi tombol kembali untuk kembali ke fragment sebelumnya
         requireActivity().onBackPressedDispatcher.addCallback(this) {
             findNavController().navigateUp()
         }
@@ -94,7 +90,6 @@ class RegisterFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 }

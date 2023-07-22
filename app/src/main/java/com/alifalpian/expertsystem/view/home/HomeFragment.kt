@@ -49,7 +49,6 @@ class HomeFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 

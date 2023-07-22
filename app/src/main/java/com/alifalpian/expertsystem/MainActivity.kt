@@ -72,7 +72,6 @@ class MainActivity : AppCompatActivity() {
             currentFragment == R.id.profileFragment ||
             currentFragment == R.id.aboutFragment
         ) {
-            // Do nothing
         } else {
             super.onBackPressed()
         }

@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.alifalpian.expertsystem.R
 import com.alifalpian.expertsystem.databinding.DiseaseListBinding
 import com.alifalpian.expertsystem.model.MyDisease
-import com.bumptech.glide.Glide
 
 class DiseaseAdapter(private val DataDisease: ArrayList<MyDisease>) : RecyclerView.Adapter<DiseaseAdapter.ViewHolder>() {
     class ViewHolder(val binding: DiseaseListBinding) : RecyclerView.ViewHolder(binding.root)

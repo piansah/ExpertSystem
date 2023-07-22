@@ -27,7 +27,6 @@ class LoginFragment : Fragment(), View.OnClickListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate layout untuk tampilan LoginFragment
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -43,7 +42,6 @@ class LoginFragment : Fragment(), View.OnClickListener {
         auth = Firebase.auth
         sharedPrefs = requireContext().getSharedPreferences("DataUser", Context.MODE_PRIVATE)
 
-        // Cek apakah pengguna telah login sebelumnya
         if (sharedPrefs.contains("user_id")) {
             val userId = sharedPrefs.getInt("user_id", 0)
             if (userId != 0) {
@@ -71,7 +69,6 @@ class LoginFragment : Fragment(), View.OnClickListener {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
-                    // Simpan informasi pengguna dalam SharedPreferences
                     with(sharedPrefs.edit()){
                         putInt("user_id", 1)
                         apply()
@@ -105,7 +102,6 @@ class LoginFragment : Fragment(), View.OnClickListener {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        // Membersihkan binding saat view fragment dihancurkan
         _binding = null
     }
 }

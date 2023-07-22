@@ -47,7 +47,6 @@ class DiseaseFragment : Fragment() {
             }
 
             override fun onCancelled(databaseError: DatabaseError) {
-                // Handle database error
             }
         })
     }
