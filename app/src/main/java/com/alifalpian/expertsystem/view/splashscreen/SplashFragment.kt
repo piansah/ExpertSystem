@@ -17,6 +17,7 @@ class SplashFragment : Fragment() {
     private var _binding: FragmentSplashBinding? = null
     private val binding get() = _binding!!
 
+    // Membuat tampilan fragment dengan meng-inflate layout FragmentSplashBinding.
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -26,22 +27,26 @@ class SplashFragment : Fragment() {
         return binding.root
     }
 
+    // Mengatur tindakan yang dilakukan setelah tampilan fragment dibuat.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Mendapatkan Shared Preferences dengan nama "DataUser" dan mode private.
         sharedPrefs = requireContext().getSharedPreferences("DataUser", Context.MODE_PRIVATE)
 
-        if (sharedPrefs.contains("user_id")) {
-            Handler().postDelayed({
+        // Cek apakah terdapat "user_id" di dalam Shared Preferences.
+        // Jika ada, maka akan diarahkan ke halaman HomeFragment.
+        // Jika tidak ada, maka akan diarahkan ke halaman LoginFragment.
+        Handler().postDelayed({
+            if (sharedPrefs.contains("user_id")) {
                 findNavController().navigate(R.id.action_splashFragment_to_homeFragment)
-            }, 1000)
-        }else{
-            Handler().postDelayed({
+            } else {
                 findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
-            }, 1000)
-        }
+            }
+        }, 1000)
     }
 
+    // Membersihkan binding saat view fragment dihancurkan.
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

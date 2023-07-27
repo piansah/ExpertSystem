@@ -25,6 +25,7 @@ class RegisterFragment : Fragment() {
     private lateinit var auth: FirebaseAuth
     private val calendar: Calendar = Calendar.getInstance()
 
+    // Membuat tampilan fragment dengan meng-inflate layout FragmentRegisterBinding.
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,6 +35,7 @@ class RegisterFragment : Fragment() {
         return binding.root
     }
 
+    // Menyiapkan tampilan dan aksi onClick untuk tombol register dan inputDateOfBirth (Date Picker).
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -42,29 +44,32 @@ class RegisterFragment : Fragment() {
         binding.inputDateOfBirth.setOnClickListener { showDatePickerDialog() }
     }
 
+    // Fungsi untuk membuat akun pengguna baru dengan email dan password.
     private fun createAccount() {
         val email = binding.inputEmail.text.toString()
         val password = binding.inputPassword.text.toString()
 
         if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
-            Toast.makeText(requireContext(), "Email and password are required.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Email dan password diperlukan", Toast.LENGTH_SHORT).show()
             return
         }
 
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
             if (task.isSuccessful) {
-                Toast.makeText(requireContext(), "User created successfully.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Register Berhasil", Toast.LENGTH_SHORT).show()
                 navigateToLogin()
             } else {
-                Toast.makeText(requireContext(), "Failed to create user.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Register Gagal", Toast.LENGTH_SHORT).show()
             }
         }
     }
 
+    // Fungsi untuk melakukan navigasi ke halaman login setelah akun berhasil dibuat.
     private fun navigateToLogin() {
         findNavController().navigate(R.id.action_registerFragment_to_loginFragment)
     }
 
+    // Fungsi untuk menampilkan Date Picker Dialog saat inputDateOfBirth di klik.
     private fun showDatePickerDialog() {
         val year = calendar.get(Calendar.YEAR)
         val month = calendar.get(Calendar.MONTH)
@@ -80,6 +85,8 @@ class RegisterFragment : Fragment() {
         datePickerDialog.show()
     }
 
+    // Menambahkan aksi ketika tombol back ditekan.
+    // Ketika tombol back ditekan, fragment akan melakukan navigasi ke atas (navigateUp) menggunakan NavController.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this) {
@@ -87,7 +94,7 @@ class RegisterFragment : Fragment() {
         }
     }
 
-
+    // Membersihkan referensi view binding (_binding) ketika fragment dihancurkan.
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

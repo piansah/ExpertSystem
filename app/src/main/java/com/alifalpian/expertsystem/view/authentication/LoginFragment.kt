@@ -22,6 +22,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
     private lateinit var auth: FirebaseAuth
     private lateinit var sharedPrefs: SharedPreferences
 
+    // Membuat tampilan fragment dengan meng-inflate layout FragmentLoginBinding.
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,6 +32,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
         return binding.root
     }
 
+    // Menyiapkan tampilan dan aksi onClick untuk tombol login dan register.
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -42,6 +44,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
         auth = Firebase.auth
         sharedPrefs = requireContext().getSharedPreferences("DataUser", Context.MODE_PRIVATE)
 
+        // Jika ada data user_id yang tersimpan di shared preferences, langsung navigasi ke halaman home.
         if (sharedPrefs.contains("user_id")) {
             val userId = sharedPrefs.getInt("user_id", 0)
             if (userId != 0) {
@@ -50,6 +53,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
         }
     }
 
+    // Implementasi onClickListener untuk tombol login dan register.
     override fun onClick(view: View?) {
         when (view?.id) {
             R.id.btnLogin -> signIn(
@@ -61,6 +65,7 @@ class LoginFragment : Fragment(), View.OnClickListener {
         }
     }
 
+    // Fungsi untuk melakukan proses login dengan email dan password menggunakan Firebase Authentication.
     private fun signIn(email: String, password: String) {
         if (!validateForm()) {
             return
@@ -69,18 +74,21 @@ class LoginFragment : Fragment(), View.OnClickListener {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
+                    // Jika login berhasil, simpan data user_id (contoh: 1) ke shared preferences.
                     with(sharedPrefs.edit()){
                         putInt("user_id", 1)
                         apply()
                     }
-                    Toast.makeText(requireContext(), "Authentication successful", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Login Berhasil", Toast.LENGTH_SHORT).show()
                     findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
                 } else {
-                    Toast.makeText(requireContext(), "Authentication failed", Toast.LENGTH_SHORT).show()
+                    // Jika login gagal, tampilkan pesan kesalahan.
+                    Toast.makeText(requireContext(), "Login Gagal", Toast.LENGTH_SHORT).show()
                 }
             }
     }
 
+    // Fungsi untuk memvalidasi form login, memastikan email dan password diisi.
     private fun validateForm(): Boolean {
         var valid = true
         val email = binding.inputEmail.text.toString()
@@ -100,9 +108,9 @@ class LoginFragment : Fragment(), View.OnClickListener {
         return valid
     }
 
+    // Membersihkan referensi view binding (_binding) ketika fragment dihancurkan.
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 }
-

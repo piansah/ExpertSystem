@@ -61,6 +61,7 @@ class DiagnoseFragment : Fragment() {
     private val P7 = "Hypermetropi"
     private val P8 = "Astigmatisma"
 
+    // Membuat tampilan fragment dengan meng-inflate layout FragmentDiagnoseBinding.
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -69,9 +70,11 @@ class DiagnoseFragment : Fragment() {
         _binding = FragmentDiagnoseBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        // Inisialisasi Firebase Realtime Database
         val database = FirebaseDatabase.getInstance()
         val diagnosaRef = database.reference.child("diagnose")
 
+        // Inisialisasi elemen-elemen tampilan checkbox dan button di layout.
         penglihatanTerasaKabur = binding.G1
         mataBerair = binding.G2
         mataBengkak = binding.G3
@@ -103,9 +106,11 @@ class DiagnoseFragment : Fragment() {
 
         btnDiagnosa = binding.btnDiagnosa
 
+        // Aksi ketika tombol Diagnosa ditekan.
         btnDiagnosa.setOnClickListener {
             var namaPenyakit = ""
 
+            // Proses pengecekan gejala pada checkbox dan menambahkan nama penyakit ke variabel namaPenyakit.
             if (penglihatanTerasaKabur.isChecked && penglihatanObjekGanda.isChecked && mataTerasaNyeri.isChecked && terlihatBayanganGarisHitam.isChecked) {
                 namaPenyakit += "$P1, "
                 Log.d("Check", namaPenyakit)
@@ -152,13 +157,16 @@ class DiagnoseFragment : Fragment() {
             if (namaPenyakit.isNotEmpty()) {
                 namaPenyakit = namaPenyakit.substring(0, namaPenyakit.length - 2)
             }else {
+                // Jika tidak ada nama penyakit yang terdeteksi, set namaPenyakit sebagai "Penyakit tidak terdeteksi".
                 namaPenyakit = "Penyakit tidak terdeteksi"
             }
 
+            // Navigasi ke halaman ResultFragment dan mengirimkan data namaPenyakit melalui bundle.
             val bundle = Bundle()
             bundle.putString("diagnosa", namaPenyakit)
             findNavController().navigate(R.id.action_diagnoseFragment_to_resultFragment,bundle)
 
+            // Menyimpan hasil diagnosa ke Firebase Realtime Database bersama dengan waktu dan tanggal.
             val dateTime = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())
             val diagnosaData = HashMap<String, Any>()
             diagnosaData["result"] = namaPenyakit
@@ -175,11 +183,14 @@ class DiagnoseFragment : Fragment() {
         return view
     }
 
+    // Membersihkan referensi view binding (_binding) ketika fragment dihancurkan.
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 
+    // Menambahkan aksi ketika tombol back ditekan.
+    // Ketika tombol back ditekan, fragment akan melakukan navigasi ke atas (navigateUp) menggunakan NavController.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this) {

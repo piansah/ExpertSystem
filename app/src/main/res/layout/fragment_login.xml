@@ -110,15 +110,6 @@
             android:layout_marginEnd="10dp"
             android:textStyle="normal" />
 
-        <ImageView
-            android:id="@+id/btnEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="140dp"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/btnRegister"
-            app:srcCompat="@drawable/google_login" />
-
     </RelativeLayout>
 
 </ScrollView>

@@ -43,14 +43,15 @@ class LoginFragment : Fragment(), View.OnClickListener {
         auth = Firebase.auth
         sharedPrefs = requireContext().getSharedPreferences("DataUser", Context.MODE_PRIVATE)
 
-//        // Cek apakah pengguna telah login sebelumnya
-//        if (sharedPrefs.contains("user_id")) {
-//            val userId = sharedPrefs.getInt("user_id", 0)
-//            if (userId != 0) {
-//                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
-//            }
-//        }
+          // Cek apakah pengguna telah login sebelumnya
+        if (sharedPrefs.contains("user_id")) {
+            val userId = sharedPrefs.getInt("user_id", 0)
+            if (userId != 0) {
+                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+            }
+        }
     }
+
 
     override fun onClick(view: View?) {
         when (view?.id) {

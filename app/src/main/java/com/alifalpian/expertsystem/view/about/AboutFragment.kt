@@ -13,6 +13,7 @@ class AboutFragment : Fragment() {
     private var _binding: FragmentAboutBinding? = null
     private val binding get() = _binding!!
 
+    // Membuat tampilan fragment dengan meng-inflate layout FragmentAboutBinding.
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,6 +24,8 @@ class AboutFragment : Fragment() {
         return binding.root
     }
 
+    // Menambahkan aksi ketika tombol back ditekan.
+    // Ketika tombol back ditekan, fragment akan melakukan navigasi ke atas (navigateUp) menggunakan NavController.
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(this) {
@@ -30,10 +33,9 @@ class AboutFragment : Fragment() {
         }
     }
 
+    // Membersihkan referensi view binding (_binding) ketika fragment dihancurkan.
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 }
-
-
